@@ -1,13 +1,15 @@
 import {Composition} from 'remotion';
-import {MyComposition} from './Composition';
+import {Meteor3Ex1} from './Meteor3';
+import './style.css';
+
 
 export const RemotionRoot: React.FC = () => {
 	return (
 		<>
 			<Composition
-				id="MyComp"
-				component={MyComposition}
-				durationInFrames={60}
+				id="Meteor3Ex1"
+				component={Meteor3Ex1}
+				durationInFrames={700}
 				fps={30}
 				width={1280}
 				height={720}
