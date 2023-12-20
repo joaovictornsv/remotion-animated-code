@@ -12,7 +12,7 @@ import {CodeLine} from './components/CodeLine';
 import {Window} from './components/Window';
 
 const STATE_DURATION = 50;
-const CODE_LINE_HEIGHT = 28;
+const CODE_LINE_HEIGHT = 32;
 const SAFE_SIZE_NONE_VALUE = 0.0001;
 
 const SIZE_ANIMATIONS = {
@@ -78,7 +78,7 @@ export const Meteor3Ex1 = () => {
 				</CodeLine>
 
 				<CodeLine tabIndentation={1} className="flex-col">
-					<CodePiece text="const contentsCursor = ContentsCollection.find({ topicId: {$in: topicsIds } });" />
+					<CodePiece text="const contentsCursor = ContentsCollection.find({ topicId: { $in: topicsIds } });" />
 				</CodeLine>
 				<CodeLine tabIndentation={1}>
 					<CodePiece text="const contentsIds = " />

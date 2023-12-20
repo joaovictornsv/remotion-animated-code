@@ -1,10 +1,12 @@
 import React, {ComponentProps} from 'react';
 import {Animated, AnimatedProps} from 'remotion-animated';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import {atomOneDark as codeTheme} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 const HIGHLIGHT_TYPES = {
-	SUCCESS: 'bg-green-600',
-	ERROR: 'bg-red-600',
-	WARNING: 'bg-amber-600',
+	SUCCESS: 'bg-green-600 bg-opacity-50',
+	ERROR: 'bg-red-600 bg-opacity-50',
+	WARNING: 'bg-amber-600  bg-opacity-50',
 };
 
 const UNDERLINE_TYPES = {
@@ -52,7 +54,15 @@ export const CodePiece = (props: CodePieceProps) => {
 				/>
 			)}
 
-			<pre className="relative">{props.children || props.text}</pre>
+			<pre className="relative">
+				<SyntaxHighlighter
+					language="javascript"
+					className="!overflow-visible !m-0 !px-0 !py-0.5 !bg-transparent"
+					style={codeTheme}
+				>
+					{props.children || props.text}
+				</SyntaxHighlighter>
+			</pre>
 		</Animated>
 	);
 };
